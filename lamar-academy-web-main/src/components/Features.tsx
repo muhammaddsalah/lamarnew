@@ -125,17 +125,6 @@ const Features = () => {
             icon={<GraduationCap className="h-6 w-6 text-blue-600" />}
             color="bg-blue-600"
           />
-          <div id="success-story-section" className="col-span-1">
-            <FeatureCard 
-              title="قصة نجاح"
-              description="قصة طالب في الصف الخامس لم يكن يعرف القراءة والكتابة، ووالدته كانت مقررة تدخله دمج. لم نوافق واشتغلنا معاه تأسيس عربي وبيرايفت لكل المواد. الآن الطالب في الصف السادس يكتب ويقرأ بأمتياز. أي حد نفسه ابنه أو بنته يبقوا كده يتواصل معانا."
-              icon={<Sparkles className="h-6 w-6 text-green-600" />}
-              color="bg-green-600"
-              buttonText="تواصل معنا"
-              buttonAction={() => window.open('https://wa.me/201000570375?text=مرحباً، أود التواصل بخصوص قصة النجاح', '_blank')}
-              buttonClassName="bg-green-600 hover:bg-green-700 text-white"
-            />
-          </div>
           <div id="experiences-section" className="col-span-1">
             <FeatureCard 
               title="من خبراتنا"
