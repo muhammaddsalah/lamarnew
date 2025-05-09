@@ -251,13 +251,13 @@ const Navbar = () => {
           {language === 'ar' && (
             <>
               <button
-                onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+                onClick={() => scrollToSection('experiences-section')}
                 className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
               >
                 من خبراتنا
               </button>
               <button
-                onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+                onClick={() => scrollToSection('success-story-section')}
                 className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
               >
                 قصة نجاح
@@ -287,7 +287,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+            onClick={() => scrollToSection('experiences-section')}
             className="text-gray-700 hover:text-lamar-primary transition-colors"
           >
             {t('nav.experiences')}
@@ -295,7 +295,7 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+            onClick={() => scrollToSection('success-story-section')}
             className="text-gray-700 hover:text-lamar-primary transition-colors"
           >
             {t('nav.successStory')}
@@ -401,13 +401,13 @@ const Navbar = () => {
                   {language === 'ar' && (
                     <>
                       <button
-                        onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+                        onClick={() => scrollToSection('experiences-section')}
                         className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                       >
                         من خبراتنا
                       </button>
                       <button
-                        onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+                        onClick={() => scrollToSection('success-story-section')}
                         className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                       >
                         قصة نجاح
