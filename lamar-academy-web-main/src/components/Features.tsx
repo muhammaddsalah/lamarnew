@@ -130,23 +130,6 @@ const Features = () => {
             description="قصة طالب في الصف الخامس لم يكن يعرف القراءة والكتابة، ووالدته كانت مقررة تدخله دمج. لم نوافق واشتغلنا معاه تأسيس عربي وبيرايفت لكل المواد. الآن الطالب في الصف السادس يكتب ويقرأ بأمتياز. أي حد نفسه ابنه أو بنته يبقوا كده يتواصل معانا."
             icon={<Sparkles className="h-6 w-6 text-green-600" />}
             color="bg-green-600"
-            className="success-story-card"
-            descriptionClassName="success-story-text"
-          />
-          <FeatureCard 
-            title="تابعنا"
-            description={[
-              "عاوز تبقى متميز فى تخصصات التحاليل الطبيه؟ تابعنا",
-              "عاوز تفتح مشروع ومش عارف تحسبها ازاى؟ تابعنا",
-              "عاوز تبنى مستقبل تعليم اولادك؟ تابعنا",
-              "محتاج كورس تسويق Marketing؟ تابعنا",
-              "نفسك تشتغل فى دعاية الادويه؟ تابعنا",
-              "عاوز تتعلم لغات؟ تابعنا"
-            ].join('\n\n')}
-            icon={<Megaphone className="h-6 w-6 text-purple-600" />}
-            color="bg-purple-600"
-            className="marketing-card"
-            descriptionClassName="marketing-text"
           />
         </div>
       </div>

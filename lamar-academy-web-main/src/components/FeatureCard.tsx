@@ -2,18 +2,15 @@ import React, { useState } from 'react';
 import { Book, BookOpen, Code, GraduationCap, Languages, Users, Baby, School, Percent } from 'lucide-react';
 import BookingForm from './BookingForm';
 import { useLanguage } from './LanguageContext';
-import { motion } from 'framer-motion';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  color: string;
   buttonText?: string;
   buttonAction?: () => void;
   buttonClassName?: string;
-  color?: string;
-  className?: string;
-  descriptionClassName?: string;
 }
 
 const courseOptions = {
@@ -117,17 +114,7 @@ const courseOptions = {
   ]
 };
 
-const FeatureCard: React.FC<FeatureCardProps> = ({
-  icon,
-  title,
-  description,
-  buttonText,
-  buttonAction,
-  buttonClassName,
-  color = 'bg-white',
-  className = '',
-  descriptionClassName = '',
-}) => {
+const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction, buttonClassName }: FeatureCardProps) => {
   const [showCourseOptions, setShowCourseOptions] = useState(false);
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState('');
@@ -206,34 +193,34 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   };
   
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className={`rounded-lg shadow-lg overflow-hidden ${color} ${className}`}
+    <div
+      className="bg-white rounded-xl shadow-lg p-6 relative overflow-hidden hover:scale-105 transition-transform"
     >
-      <div className="p-6">
-        <div className="flex items-center justify-center mb-4">
+      <div className={`absolute top-0 right-0 w-32 h-32 ${color} opacity-10 rounded-full -mr-16 -mt-16`} />
+      <div className="relative z-10">
+        <div className={`w-12 h-12 ${color} rounded-lg flex items-center justify-center mb-4`}>
           {icon}
         </div>
-        <h3 className="text-xl font-bold text-center mb-4">{title}</h3>
-        <p className={`text-center mb-6 ${descriptionClassName}`}>{description}</p>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
         {title !== 'لماذا تختارنا؟' && (
-          <div className="flex items-center justify-center gap-2 mb-4">
+          <div className="flex items-center gap-2 mb-4">
             <Percent className="h-5 w-5 text-green-600" />
             <span className="text-green-600 font-medium">خصم 5% على جميع الدورات</span>
           </div>
         )}
-        <div className="text-center">
+        <div className="flex gap-2">
           {title === 'لماذا تختارنا؟' ? (
             <button
               onClick={() => window.open('https://wa.me/201000570375?text=مرحباً، أود التواصل مع أكاديمية لمار', '_blank')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
             >
               تواصل معنا
             </button>
           ) : (
             <button
               onClick={handleBookNowClick}
-              className={`px-6 py-2 rounded-full transition-colors ${getButtonColor(title)}`}
+              className={`${getButtonColor(title)} text-white px-4 py-2 rounded-lg transition-colors`}
             >
               {showCourseOptions ? 'إخفاء الخيارات' : 'احجز الآن'}
             </button>
@@ -548,7 +535,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           onClose={handleCloseBookingForm}
         />
       )}
-    </motion.div>
+    </div>
   );
 };
 
