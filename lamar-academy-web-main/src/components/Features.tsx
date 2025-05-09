@@ -130,6 +130,8 @@ const Features = () => {
             description="قصة طالب في الصف الخامس لم يكن يعرف القراءة والكتابة، ووالدته كانت مقررة تدخله دمج. لم نوافق واشتغلنا معاه تأسيس عربي وبيرايفت لكل المواد. الآن الطالب في الصف السادس يكتب ويقرأ بأمتياز. أي حد نفسه ابنه أو بنته يبقوا كده يتواصل معانا."
             icon={<Sparkles className="h-6 w-6 text-green-600" />}
             color="bg-green-600"
+            className="success-story-card"
+            descriptionClassName="success-story-text"
           />
         </div>
       </div>
