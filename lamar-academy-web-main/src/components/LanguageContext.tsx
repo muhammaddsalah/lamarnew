@@ -8,7 +8,15 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const translations = {
+interface Translations {
+  [key: string]: {
+    [key: string]: string | {
+      [key: string]: string;
+    };
+  };
+}
+
+const translations: Translations = {
   ar: {
     'site.title': 'أكاديمية لمار التعليمية',
     'site.slogan': 'نعلّم جيلًا... نبني مستقبلًا',
@@ -45,6 +53,12 @@ const translations = {
     'why.reason5': 'بيئة تعليمية مشجعة وآمنة تساعد على تحقيق أفضل النتائج',
     'cta': 'انضم إلينا اليوم وابدأ رحلتك التعليمية معنا!',
     'btn.book': 'احجز الآن',
+    nav: {
+      courses: 'الدورات',
+      locations: 'مقراتنا',
+      experiences: 'من خبراتنا',
+      successStory: 'قصة نجاح'
+    },
   },
   en: {
     'site.title': 'Lamar Educational Academy',
@@ -80,6 +94,12 @@ const translations = {
     'why.reason5': 'Encouraging and safe learning environment',
     'cta': 'Join us today and start your educational journey with us!',
     'btn.book': 'Book Now',
+    nav: {
+      courses: 'Courses',
+      locations: 'Locations',
+      experiences: 'Our Experiences',
+      successStory: 'Success Story'
+    },
   },
 };
 

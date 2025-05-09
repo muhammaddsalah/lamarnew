@@ -125,6 +125,12 @@ const Navbar = () => {
     }
   };
 
+  const handleWhatsAppClick = (message: string) => {
+    const whatsappNumber = "201012345678"; // رقم الواتساب الخاص بك
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
+  };
+
   return (
     <motion.header 
       className={`w-full py-2 bg-white fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -242,6 +248,42 @@ const Navbar = () => {
             {t('address.title')}
           </button>
         </div>
+
+        {/* Navigation Links */}
+        <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('courses')}
+            className="text-gray-700 hover:text-lamar-primary transition-colors"
+          >
+            {t('nav.courses')}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('locations')}
+            className="text-gray-700 hover:text-lamar-primary transition-colors"
+          >
+            {t('nav.locations')}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+            className="text-gray-700 hover:text-lamar-primary transition-colors"
+          >
+            {t('nav.experiences')}
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+            className="text-gray-700 hover:text-lamar-primary transition-colors"
+          >
+            {t('nav.successStory')}
+          </motion.button>
+        </nav>
 
         {/* Mobile Menu Button */}
         <button
