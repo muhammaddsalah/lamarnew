@@ -247,6 +247,23 @@ const Navbar = () => {
           >
             {t('address.title')}
           </button>
+          {/* أزرار من خبراتنا وقصة نجاح بالعربية فقط */}
+          {language === 'ar' && (
+            <>
+              <button
+                onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
+              >
+                من خبراتنا
+              </button>
+              <button
+                onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors font-medium"
+              >
+                قصة نجاح
+              </button>
+            </>
+          )}
         </div>
 
         {/* Navigation Links */}
@@ -364,22 +381,39 @@ const Navbar = () => {
                 <div className="space-y-2">
                   <button
                     onClick={() => scrollToSection('courses')}
-                    className="block w-full text-right px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
+                    className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                   >
                     {t('nav.courses')}
                   </button>
                   <button
                     onClick={() => scrollToSection('address')}
-                    className="block w-full text-right px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-md transition-colors"
+                    className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                   >
                     {t('address.title')}
                   </button>
                   <button
                     onClick={() => window.open('https://wa.me/201000570375?text=مرحباً، أود التواصل مع أكاديمية لمار', '_blank')}
-                    className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors mt-4"
+                    className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
                   >
                     تواصل معنا
                   </button>
+                  {/* أزرار من خبراتنا وقصة نجاح بالعربية فقط */}
+                  {language === 'ar' && (
+                    <>
+                      <button
+                        onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن خبراتكم")}
+                        className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      >
+                        من خبراتنا
+                      </button>
+                      <button
+                        onClick={() => handleWhatsAppClick("أريد معرفة المزيد عن قصص النجاح")}
+                        className="block w-full text-right px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      >
+                        قصة نجاح
+                      </button>
+                    </>
+                  )}
                 </div>
                 <div className="mt-8 space-y-4 border-t pt-4">
                   <a 
