@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
+import { Analytics } from '@vercel/analytics/next';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -42,6 +43,7 @@ const Index = () => {
       <section id="address">
         <Footer />
       </section>
+      <Analytics />
     </div>
   );
 };
