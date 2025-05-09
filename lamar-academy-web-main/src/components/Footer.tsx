@@ -87,7 +87,7 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-blue-600" />
                   <span className="font-semibold text-lg text-black">الفرع الثاني</span>
                 </div>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 بنها - الاهرام ورا نقابه الصيادله</span>
+                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 بنها - الاهرام - أمام نقابة الصيادلة</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">🕒 من 11:00 ص الى 11:00 م</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📞 01000570375</span>
               </li>
@@ -99,7 +99,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4 text-black">احجز معنا</h3>
             <div className="space-y-4">
               <a
-                href="https://wa.me/201000570375?text=مرحباً، أود الحجز في أكاديمية اللغات%0Aالاسم: %0Aرقم الهاتف: %0Aالفرع: الفرع الأول"
+                href="https://wa.me/201000570375?text=مرحباً، أود الحجز في أكاديمية اللغات%0Aالاسم: %0Aرقم الهاتف: %0Aالفرع: بنها - الفلل قبل كوبرى الفحص"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-4 py-2 text-center text-black hover:text-blue-700 transition-colors"
@@ -107,7 +107,7 @@ const Footer = () => {
                 حجز أكاديمية اللغات
               </a>
               <a
-                href="https://wa.me/201000570375?text=مرحباً، أود الحجز في دورة البرمجة%0Aالاسم: %0Aرقم الهاتف: %0Aالفرع: الفرع الثاني"
+                href="https://wa.me/201000570375?text=مرحباً، أود الحجز في دورة البرمجة%0Aالاسم: %0Aرقم الهاتف: %0Aالفرع: بنها - الاهرام - أمام نقابة الصيادلة"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full px-4 py-2 text-center text-black hover:text-blue-700 transition-colors"

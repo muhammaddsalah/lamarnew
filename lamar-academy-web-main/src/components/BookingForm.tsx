@@ -9,7 +9,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ courseName, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    branch: 'فرع الفلل - بنها'
+    branch: 'بنها - الفلل قبل كوبرى الفحص'
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -61,8 +61,8 @@ const BookingForm: React.FC<BookingFormProps> = ({ courseName, onClose }) => {
               value={formData.branch}
               onChange={(e) => setFormData({...formData, branch: e.target.value})}
             >
-              <option value="فرع الفلل - بنها">فرع الفلل - بنها</option>
-              <option value="فرع الاهرام - بنها">فرع الاهرام - بنها</option>
+              <option value="بنها - الفلل قبل كوبرى الفحص">بنها - الفلل قبل كوبرى الفحص</option>
+              <option value="بنها - الاهرام - أمام نقابة الصيادلة">بنها - الاهرام - أمام نقابة الصيادلة</option>
             </select>
           </div>
           <div className="flex justify-end space-x-2">

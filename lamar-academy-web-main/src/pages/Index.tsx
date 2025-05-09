@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -24,6 +24,10 @@ const Index = () => {
     };
     
     animateElements();
+    
+    // تهيئة Speed Insights
+    const { setRoute } = injectSpeedInsights();
+    setRoute(window.location.pathname);
   }, []);
 
   return (
@@ -45,7 +49,6 @@ const Index = () => {
         <Footer />
       </section>
       <Analytics />
-      <SpeedInsights />
     </div>
   );
 };
