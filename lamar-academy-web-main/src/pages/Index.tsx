@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLanguage } from '@/components/LanguageContext';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -44,6 +45,7 @@ const Index = () => {
         <Footer />
       </section>
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 };
