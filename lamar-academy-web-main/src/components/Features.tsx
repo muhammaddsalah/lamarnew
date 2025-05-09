@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from './LanguageContext';
 import FeatureCard from './FeatureCard';
-import { Book, BookOpen, Code, GraduationCap, Languages, Users, Baby, School, BookText, BookMarked, Sparkles } from 'lucide-react';
+import { Book, BookOpen, Code, GraduationCap, Languages, Users, Baby, School, BookText, BookMarked, Sparkles, Megaphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import BookingForm from './BookingForm';
 
@@ -132,6 +132,21 @@ const Features = () => {
             color="bg-green-600"
             className="success-story-card"
             descriptionClassName="success-story-text"
+          />
+          <FeatureCard 
+            title="تابعنا"
+            description={[
+              "عاوز تبقى متميز فى تخصصات التحاليل الطبيه؟ تابعنا",
+              "عاوز تفتح مشروع ومش عارف تحسبها ازاى؟ تابعنا",
+              "عاوز تبنى مستقبل تعليم اولادك؟ تابعنا",
+              "محتاج كورس تسويق Marketing؟ تابعنا",
+              "نفسك تشتغل فى دعاية الادويه؟ تابعنا",
+              "عاوز تتعلم لغات؟ تابعنا"
+            ].join('\n\n')}
+            icon={<Megaphone className="h-6 w-6 text-purple-600" />}
+            color="bg-purple-600"
+            className="marketing-card"
+            descriptionClassName="marketing-text"
           />
         </div>
       </div>
