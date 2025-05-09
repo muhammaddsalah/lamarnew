@@ -78,7 +78,7 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-blue-600" />
                   <span className="font-semibold text-lg text-black">الفرع الأول</span>
                 </div>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 الفلل قبل كوبرى الفحص</span>
+                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 بنها - الفلل قبل كوبرى الفحص</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">🕒 من 11:00 ص الى 11:00 م</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📞 01000570375</span>
               </li>
@@ -87,25 +87,7 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-blue-600" />
                   <span className="font-semibold text-lg text-black">الفرع الثاني</span>
                 </div>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 شارع تجاره</span>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">🕒 من 11:00 ص الى 11:00 م</span>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📞 01000570375</span>
-              </li>
-              <li className="flex flex-col items-center md:items-start gap-2">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-blue-600" />
-                  <span className="font-semibold text-lg text-black">الفرع الثالث</span>
-                </div>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 كفر الجزار</span>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">🕒 من 11:00 ص الى 11:00 م</span>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📞 01000570375</span>
-              </li>
-              <li className="flex flex-col items-center md:items-start gap-2">
-                <div className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-blue-600" />
-                  <span className="font-semibold text-lg text-black">الفرع الرابع</span>
-                </div>
-                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 شارع الكوبرى ببنها</span>
+                <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📍 بنها - الاهرام ورا نقابه الصيادله</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">🕒 من 11:00 ص الى 11:00 م</span>
                 <span className="bg-white/40 backdrop-blur-sm text-black p-3 rounded-lg text-right w-full shadow">📞 01000570375</span>
               </li>

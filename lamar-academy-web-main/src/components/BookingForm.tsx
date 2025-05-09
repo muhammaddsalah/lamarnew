@@ -62,9 +62,7 @@ const BookingForm: React.FC<BookingFormProps> = ({ courseName, onClose }) => {
               onChange={(e) => setFormData({...formData, branch: e.target.value})}
             >
               <option value="الفرع الأول - بنها">الفرع الأول - بنها</option>
-              <option value="الفرع الثاني - كفر الجزار">الفرع الثاني - كفر الجزار</option>
-              <option value="الفرع الثالث - بطا">الفرع الثالث - بطا</option>
-              <option value="الفرع الرابع - شارع الكوبرى ببنها">الفرع الرابع - شارع الكوبرى ببنها</option>
+              <option value="الفرع الثاني - بنها">الفرع الثاني - بنها</option>
             </select>
           </div>
           <div className="flex justify-end space-x-2">
