@@ -15,8 +15,8 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/public/lovable-uploads/d318ad80-e3b4-4b04-a85d-4f31b78b8fe7.png" 
-                alt="Lamar Academy Logo" 
+                src="/lovable-uploads/d318ad80-e3b4-4b04-a85d-4f31b78b8fe7.png" 
+                alt="أكاديمية لمار" 
                 className="h-16 w-auto bg-white rounded-full p-2 shadow-md" 
               />
               <div className={`flex flex-col ${language === 'ar' ? 'items-end' : 'items-start'}`}>
