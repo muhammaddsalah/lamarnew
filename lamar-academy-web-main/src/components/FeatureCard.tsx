@@ -22,11 +22,28 @@ const courseOptions = {
       options: {
         حضوري: {
           subjects: ['عربي', 'حساب', 'ماث', 'انجليزي'],
-          students: [
-            { count: 5, price: 500 },
-            { count: 10, price: 450 },
-            { count: 20, price: 400 }
-          ]
+          prices: {
+            عربي: {
+              students: [
+                { count: 5, price: 250 },
+                { count: 10, price: 200 },
+                { count: 20, price: 170 }
+              ]
+            },
+            حساب: {
+              students: [
+                { count: 5, price: 250 },
+                { count: 10, price: 200 },
+                { count: 20, price: 170 }
+              ]
+            },
+            ماث: {
+              price: 350
+            },
+            انجليزي: {
+              price: 400
+            }
+          }
         },
         برايفت: {
           subjects: ['عربي', 'حساب', 'ماث', 'انجليزي'],
@@ -291,32 +308,32 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
                     </div>
                   </div>
                   
-                  <div className="bg-gray-100 p-3 rounded-lg">
-                    <h5 className="font-medium mb-2">اختر عدد الطلاب:</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {course.options.حضوري.students.map(({ count, price }) => (
-                        <button
-                          key={count}
-                          onClick={() => handleStudentsSelect(count, price)}
-                          className={`px-3 py-1 rounded transition-colors ${
-                            selectedStudents === `${count} طلاب - ${price} ج.م`
-                              ? 'bg-green-600 text-white'
-                              : 'bg-gray-200 hover:bg-gray-300'
-                          }`}
-                        >
-                          {count} طلاب - {price} ج.م
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {showConfirmation && (
-                    <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
-                      <h5 className="font-medium text-green-800 mb-2">تفاصيل الاختيار:</h5>
-                      {selectedSubject && (
-                        <p className="text-green-700">المادة: {selectedSubject}</p>
+                  {selectedSubject && (
+                    <div className="bg-gray-100 p-3 rounded-lg">
+                      <h5 className="font-medium mb-2">السعر:</h5>
+                      {selectedSubject === 'عربي' || selectedSubject === 'حساب' ? (
+                        <div className="flex flex-wrap gap-2">
+                          {course.options.حضوري.prices[selectedSubject].students.map(student => (
+                            <button
+                              key={student.count}
+                              onClick={() => handleStudentsSelect(student.count, student.price)}
+                              className={`px-3 py-1 rounded transition-colors ${
+                                selectedStudents === `${student.count} طلاب - ${student.price} ج.م`
+                                  ? 'bg-blue-600 text-white'
+                                  : 'bg-gray-200 hover:bg-gray-300'
+                              }`}
+                            >
+                              {`${student.count} طلاب - ${student.price} ج.م`}
+                            </button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="text-center">
+                          <span className="text-xl font-bold">
+                            {course.options.حضوري.prices[selectedSubject].price} ج.م
+                          </span>
+                        </div>
                       )}
-                      {selectedStudents && (
                         <p className="text-green-700">عدد الطلاب: {selectedStudents}</p>
                       )}
                       <button
