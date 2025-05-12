@@ -5,7 +5,21 @@ import { motion } from 'framer-motion';
 
 const courseOptions = {
   'سنتر الدكتور': [
-    { id: '1', name: 'المرحلة الابتدائية العامة', price: '250-400' },
+    { 
+      id: '1', 
+      name: 'المرحلة الابتدائية العامة',
+      subjects: [
+        { name: 'عربي', price: '250-400' },
+        { name: 'حساب', price: '250-400' },
+        { name: 'ماث', price: '250-400' },
+        { name: 'انجليزي', price: '250-400' }
+      ],
+      studentGroups: [
+        { students: '5 طلاب', price: '200 ج.م' },
+        { students: '10 طلاب', price: '200 ج.م' },
+        { students: '20 طلاب', price: '170 ج.م' }
+      ]
+    },
     { id: '2', name: 'الصف السادس' },
     { id: '3', name: 'المرحلة الإعدادية العامة', price: 1000 },
     { id: '4', name: 'المرحلة الثانوية العامة', price: 300 },
