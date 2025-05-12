@@ -135,7 +135,7 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
   const [showCourseOptions, setShowCourseOptions] = useState(false);
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [selectedCourse, setSelectedCourse] = useState('');
-  const [selectedType, setSelectedType] = useState('');
+  const [selectedType, setSelectedType] = useState<'حضوري' | 'برايفت' | undefined>(undefined);
   const [selectedSubject, setSelectedSubject] = useState('');
   const [selectedStudents, setSelectedStudents] = useState('');
   const [selectedGrade, setSelectedGrade] = useState('');
@@ -156,7 +156,7 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
     setShowBookingForm(false);
   };
 
-  const handleTypeSelect = (type: string) => {
+  const handleTypeSelect = (type: 'حضوري' | 'برايفت') => {
     setSelectedType(type);
     setSelectedSubject('');
     setSelectedStudents('');
@@ -253,7 +253,7 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
                 <h4 className="font-medium">{course.name}</h4>
                 {course.type === 'special' ? (
                   <button
-                    onClick={() => handleTypeSelect('')}
+                    onClick={() => handleTypeSelect('حضوري')}
                     className="bg-black text-white px-3 py-1 rounded hover:bg-gray-800 transition-colors"
                   >
                     اختر
@@ -268,7 +268,7 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
                 )}
               </div>
               
-              {course.type === 'special' && selectedType === '' && (
+              {course.type === 'special' && !selectedType && (
                 <div className="mt-2 space-y-2">
                   <div className="flex gap-2">
                     <button
@@ -328,20 +328,21 @@ const FeatureCard = ({ icon, title, description, color, buttonText, buttonAction
                           ))}
                         </div>
                       ) : (
-                        <div className="text-center">
-                          <span className="text-xl font-bold">
-                            {course.options.حضوري.prices[selectedSubject].price} ج.م
-                          </span>
+                        <div>
+                          <div className="text-center">
+                            <span className="text-xl font-bold">
+                              {course.options.حضوري.prices[selectedSubject].price} ج.م
+                            </span>
+                          </div>
+                          <p className="text-green-700">عدد الطلاب: {selectedStudents}</p>
+                          <button
+                            onClick={handleConfirmSelection}
+                            className="mt-3 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
+                          >
+                            تأكيد الاختيار
+                          </button>
                         </div>
                       )}
-                        <p className="text-green-700">عدد الطلاب: {selectedStudents}</p>
-                      )}
-                      <button
-                        onClick={handleConfirmSelection}
-                        className="mt-3 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition-colors"
-                      >
-                        تأكيد الاختيار
-                      </button>
                     </div>
                   )}
                 </div>
